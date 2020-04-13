@@ -3,7 +3,7 @@
 shopt -s extglob
 
 read -p "Enter email id:" emailId
-emailPattern="^[A-Za-z0-9]{4,}([+|_|-])?([A-Za-z0-9])?@[a-z]{5}.[a-z]{3}.([a-z]{2})?$"	
+emailPattern="^[a-zA-Z0-9]{1,}([|+|_|\-|.]?[a-zA-Z0-9]+)?[@][a-z0-9]{4,}[.][a-z]{1,5}([.][a-z]{3})?$"	
 	if [[ $emailId =~ $emailPattern ]]
 	then
 		echo "Valid email"
